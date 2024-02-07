@@ -30,9 +30,10 @@ function CartItem({ id, quantity }: CartItemProps) {
         </div>
         <div className="text-muted">{formatCurrency(item.price)}</div>
       </div>
-      <div>{formatCurrency(item.price*quantity)}</div>
+      <div>{formatCurrency(item.price * quantity)}</div>
       <Button variant="outline-danger" size="sm" onClick={() => removeItem(id)}>
-
+        -
+      </Button>
     </Stack>
   );
 }
